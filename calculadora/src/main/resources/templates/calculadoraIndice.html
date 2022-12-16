@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora indice</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    
+    <form class="contenedor" action="">
+        <h1>Calculadora Indice</h1>
+        <h1> masa corporal</h1>
+        <table class="pepe">
+            <tr>
+                <td>Peso:</td>
+                <td>
+                    <input type="number" step="any" name="peso" th:value="${peso}">
+                </td>
+            </tr>
+            <tr>
+                <td>Altura:</td>
+                <td>
+                    <input type="number" step="any" name="altura" th:value="${altura}">
+                </td>
+            </tr>
+                <td>
+                    <input class="boton" type="submit" value="calcular">
+                </td>
+        </table>
+        <p class="pepe" th:text="'Indice: '+${indice}"></p>
+        <p class="pepe" th:text="'Estado: '+${clasificar}"></p>
+        <div><img class="imagen" th:src="@{${imagen}}" alt="imagen"></div>
+        
+    </form>
+
+</body>
+</html>
